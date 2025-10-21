@@ -76,9 +76,10 @@ def processing(raw_data):
 def save_file(data):
     """
     saves data to a file
-    :param data: dict, data to be saved
+    :param data: dict?, data to be saved
     :param filename: str, name of the file
     """
+    folder = "station_status_data/" # folder to save the data files in
     now = datetime.datetime.now() # get current date and time
     str_date = now.strftime("%Y-%m-%d_%H-%M-%S") # need to convert now into a string to use it as file name 
     filename = "station_status_" + str_date # saves file under this name

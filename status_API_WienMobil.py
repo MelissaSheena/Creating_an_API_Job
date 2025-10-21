@@ -83,7 +83,7 @@ def save_file(data):
     now = datetime.datetime.now() # get current date and time
     str_date = now.strftime("%Y-%m-%d_%H-%M-%S") # need to convert now into a string to use it as file name 
     filename = "station_status_" + str_date # saves file under this name
-    with open(f"{filename}.json", "w", encoding='utf-8') as f: 
+    with open(f"{folder}{filename}.json", "w", encoding='utf-8') as f: 
         # w = write, creates new file if the file does not exist
         # encoding for special characters 
         json.dump(data, f, ensure_ascii=False, indent=4) # adds content to the json file (need dump because it is json data)
